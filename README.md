@@ -11,9 +11,9 @@ How to run:
 If you use VS Code, you can also install the live serve extension and click "go live" to open `index.html`.
 
 files:
-- `index.html` – the markup
-- `styles.css` – the styling
-- `README.md` – this file
+- index.html – the markup
+- styles.css – the styling
+- README.md – this file
 
 Attribution. 
 - I used Google stich to help with the high fidelity interface, where I used prompted engineering and I used chat gpt 4.0 to explain concepts that I didn't know how to do yet in html/css coding, as well as online YouTube videos.
