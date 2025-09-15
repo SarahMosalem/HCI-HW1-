@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Path@Penn – Calendar Split Screen (Prototype)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone">
+    <!-- App Bar -->
+    <header class="appbar">
+      <div class="left">
+        <span class="chev">&#x2039;</span>
+        <span class="title">Search Results</span>
+      </div>
+      <div class="right">
+        <span class="icon">&#x1F4C5;</span>
+        <span class="icon">&#x1F5D2;</span>
+      </div>
+    </header>
+
+    <!-- Split toggle row -->
+    <div class="split-toggle">
+      <label class="checkbox">
+        <input type="checkbox" checked disabled /> <span>Calendar Split Screen</span>
+      </label>
+      <div class="actions">
+        <a href="#">Reset Search</a>
+      </div>
+    </div>
+
+    <!-- Found count -->
+    <div class="found-row">
+      <span>Found <strong>98</strong> courses</span>
+    </div>
+
+    <!-- Course List (TOP HALF) -->
+    <section class="course-list">
+      <!-- Card 1 -->
+      <article class="course-card">
+        <div class="row-1">
+          <div class="code">CIS 1070</div>
+          <div class="meta">
+            <div class="title">Visual culture through the computation...</div>
+            <div class="instructor">
+              <span class="label">I. Verstegen</span>
+              <a href="mailto:kverstegen@seas.upenn.edu" class="email">kverstegen@seas.upenn.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="prereq">Prereq: <span>N/A</span></div>
+          <div class="when">M,W 1:45 - 3:15</div>
+        </div>
+        <div class="row-3">
+          <button class="btn btn-waitlist" type="button">Join waitlist</button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="course-card">
+        <div class="row-1">
+          <div class="code">CIS 1100</div>
+          <div class="meta">
+            <div class="title">Introduction to Computer Programming</div>
+            <div class="instructor">
+              <span class="label">A. Smith</span>
+              <a href="mailto:asmith@seas.upenn.edu" class="email">asmith@seas.upenn.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="prereq">Prereq: <span>N/A</span></div>
+          <div class="when">T,Th 1:45 - 3:15</div>
+        </div>
+        <div class="row-3">
+          <button class="btn btn-add" type="button">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="course-card">
+        <div class="row-1">
+          <div class="code">CIS 1200</div>
+          <div class="meta">
+            <div class="title">Programming Languages and Techniques...</div>
+            <div class="instructor">
+              <span class="label">S. Sheth</span>
+              <a href="mailto:ssheth@seas.upenn.edu" class="email">ssheth@seas.upenn.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="prereq">Prereq: <span>CIS 1100</span></div>
+          <div class="when">M,W 10:15 - 12:00</div>
+        </div>
+        <div class="row-3">
+          <button class="btn btn-waitlist" type="button">Join waitlist</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Cart select bar -->
+    <div class="cart-select">
+      <span>Please Select Cart (dropdown menu)</span>
+      <span class="chev">&#x25BE;</span>
+    </div>
+
+    <!-- Calendar (BOTTOM HALF) -->
+    <section class="calendar" aria-label="Weekly calendar">
+      <!-- Day headers -->
+      <div class="day day-1">Mon</div>
+      <div class="day day-2">Tue</div>
+      <div class="day day-3">Wed</div>
+      <div class="day day-4">Thu</div>
+      <div class="day day-5">Fri</div>
+
+      <!-- Time labels -->
+      <div class="time t-8">8am</div>
+      <div class="time t-9">9am</div>
+      <div class="time t-10">10am</div>
+      <div class="time t-11">11am</div>
+      <div class="time t-12">noon</div>
+      <div class="time t-13">1pm</div>
+      <div class="time t-14">2pm</div>
+      <div class="time t-15">3pm</div>
+      <div class="time t-16">4pm</div>
+      <div class="time t-17">5pm</div>
+      <div class="time t-18">6pm</div>
+
+      <!-- Grid overlay -->
+      <div class="grid-overlay" aria-hidden="true"></div>
+
+      <!-- Example events -->
+      <div class="event green" style="--day:0; --start:3; --duration:1.5;">
+        <div class="label">CIS 5120<br/>Introduction</div>
+      </div>
+
+      <div class="event blue" style="--day:1; --start:2; --duration:2;">
+        <div class="label">CIS 5500<br/>Database</div>
+      </div>
+
+      <div class="event blue" style="--day:2; --start:2; --duration:2;">
+        <div class="label">CIS 2620<br/>Automata</div>
+      </div>
+
+      <div class="event green" style="--day:3; --start:2; --duration:2;">
+        <div class="label">ANTH 0030<br/>Human</div>
+      </div>
+
+      <div class="event red" style="--day:0; --start:5; --duration:1.5;">
+        <div class="label">ECON 0100<br/>Introductio...</div>
+      </div>
+
+      <div class="event red" style="--day:2; --start:6; --duration:1.5;">
+        <div class="label">ECON 0100<br/>Economics</div>
+      </div>
+
+      <div class="event green" style="--day:4; --start:3; --duration:1.5;">
+        <div class="label">ANTH 0030<br/>Human</div>
+      </div>
+
+      <div class="event blue" style="--day:3; --start:6; --duration:1.5;">
+        <div class="label">CIS 2620<br/>Automata</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

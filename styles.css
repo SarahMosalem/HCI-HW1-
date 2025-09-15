@@ -1,0 +1,189 @@
+/* Path@Penn Stage 4 Prototype – styles.css
+   Static mock: phone-sized, no JS needed
+*/
+:root{
+    --penn-blue: #012a5b;
+    --penn-red: #9d1b1b;
+    --penn-red-dark: #7f1414;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --green: #18a558;
+    --green-soft: #e7f6ed;
+    --red: #d9534f;
+    --red-soft: #fde8ea;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
+  
+  .phone{
+    width: 390px; /* iPhone 12-ish */
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+  
+  /* App bar */
+  .appbar{
+    background: var(--penn-red);
+    color: #fff;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .appbar .left{display:flex;align-items:center;gap:10px}
+  .appbar .chev{font-size:22px;line-height:1}
+  .appbar .title{font-weight:700}
+  .appbar .right .icon{margin-left:10px;opacity:.9}
+  
+  /* Split toggle row */
+  .split-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 10px 14px 0;
+  }
+  .checkbox{font-size:14px;color:#222}
+  .checkbox input{transform:translateY(2px)}
+  
+  .split-toggle .actions a{
+    font-size:14px;
+    color: var(--penn-blue);
+    text-decoration:none;
+  }
+  .split-toggle .actions a:hover{text-decoration:underline}
+  
+  .found-row{
+    padding: 2px 14px 8px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  
+  /* Course list */
+  .course-list{padding: 0 12px}
+  .course-card{
+    border-top:1px solid var(--border);
+    padding: 10px 2px 12px;
+  }
+  .course-card .row-1{display:flex;gap:12px}
+  .course-card .code{font-weight:800;min-width:64px}
+  .course-card .meta{flex:1}
+  .course-card .title{font-weight:600;font-size:14px;margin-top:1px}
+  .course-card .instructor{font-size:12px;color:var(--penn-blue);display:flex;gap:8px;flex-wrap:wrap}
+  .course-card .email{color:var(--penn-blue);text-decoration:none}
+  .course-card .email:hover{text-decoration:underline}
+  .course-card .row-2{display:flex;justify-content:space-between;margin-top:4px;color:var(--muted);font-size:12px}
+  .course-card .prereq span{color:#111}
+  .course-card .row-3{margin-top:8px}
+  
+  .btn{
+    font-size:12.5px;border:none;border-radius:8px;padding:8px 12px;font-weight:600
+  }
+  .btn-add{background:var(--green-soft);color:#0a6a36;border:1px solid #b7e2c7}
+  .btn-waitlist{background:var(--red-soft);color:#8a1e1a;border:1px solid #f3b7bb}
+  
+  /* Cart select bar */
+  .cart-select{
+    margin-top: 8px;
+    background: var(--penn-red);
+    color:#fff;
+    padding: 10px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-weight:600;
+  }
+  
+  /* Calendar */
+  .calendar{
+    position: relative;
+    height: 520px;
+    /* Grid math helpers */
+    --rowH: 42px;              /* height per hour slot */
+    --colW: calc((100% - 60px)/5); /* 60px for time labels */
+    border-top:1px solid var(--border);
+    background:#fff;
+  }
+  
+  /* Day headers */
+  .day{
+    position:absolute;
+    top: 0;
+    height: 36px;
+    line-height:36px;
+    text-align:center;
+    color: #6b7280;
+    font-weight:600;
+    border-bottom:1px solid var(--border);
+  }
+  .day-1{left: 60px; width: var(--colW);}
+  .day-2{left: calc(60px + var(--colW) * 1); width: var(--colW);}
+  .day-3{left: calc(60px + var(--colW) * 2); width: var(--colW);}
+  .day-4{left: calc(60px + var(--colW) * 3); width: var(--colW);}
+  .day-5{left: calc(60px + var(--colW) * 4); width: var(--colW);}
+  
+  /* Time labels */
+  .time{
+    position:absolute;
+    left: 8px;
+    width: 52px;
+    color: #6b7280;
+    font-size: 12px;
+  }
+  .t-8{top: 36px}
+  .t-9{top: calc(36px + var(--rowH) * 1)}
+  .t-10{top: calc(36px + var(--rowH) * 2)}
+  .t-11{top: calc(36px + var(--rowH) * 3)}
+  .t-12{top: calc(36px + var(--rowH) * 4)}
+  .t-13{top: calc(36px + var(--rowH) * 5)}
+  .t-14{top: calc(36px + var(--rowH) * 6)}
+  .t-15{top: calc(36px + var(--rowH) * 7)}
+  .t-16{top: calc(36px + var(--rowH) * 8)}
+  .t-17{top: calc(36px + var(--rowH) * 9)}
+  .t-18{top: calc(36px + var(--rowH) * 10)}
+  
+  /* Grid overlay (vertical & horizontal lines) */
+  .grid-overlay{
+    position:absolute;
+    left:60px;
+    right:0;
+    top:36px;
+    bottom:0;
+    background-image:
+      repeating-linear-gradient(to bottom, #eaecee 0, #eaecee 1px, transparent 1px, transparent var(--rowH)),
+      repeating-linear-gradient(to right, #eaecee 0, #eaecee 1px, transparent 1px, transparent var(--colW));
+    pointer-events:none;
+  }
+  
+  /* Calendar events */
+  .event{
+    position:absolute;
+    left: calc(60px + var(--colW) * var(--day));
+    top: calc(36px + var(--rowH) * var(--start));
+    height: calc(var(--rowH) * var(--duration) - 6px);
+    width: calc(var(--colW) - 8px);
+    margin: 3px 4px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.06);
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:6px;
+    font-size:11px;
+    line-height:1.2;
+    color:#0e3b2e;
+  }
+  .event .label{opacity:.95}
+  .event.green{background: #e6f5ea}
+  .event.blue{background: #e7efff; color:#0d255a}
+  .event.red{background: #fde8ea; color:#7b1f1b}
+  
