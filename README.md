@@ -6,9 +6,9 @@ Per assignment rules, this is a single opening screen only. No JavaScript behavi
 
 How to run:
 1. Download this folder (or the zip) to a computer.
-2. Open `index.html` in any modern browser(ex chrome, safari, etc)
+2. Open index.html in any modern browser(ex chrome, safari, etc)
 
-If you use VS Code, you can also install the live serve extension and click "go live" to open `index.html`.
+If you use VS Code, you can also install the live serve extension and click "go live" to open index.html.
 
 files:
 - index.html – the markup
