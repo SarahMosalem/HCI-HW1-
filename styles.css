@@ -1,6 +1,4 @@
-/* Path@Penn Stage 4 Prototype – styles.css
-   Static mock: phone-sized, no JS needed
-*/
+
 :root{
     --penn-blue: #012a5b;
     --penn-red: #9d1b1b;
@@ -20,7 +18,7 @@
   html,body{height:100%;margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
   
   .phone{
-    width: 390px; /* iPhone 12-ish */
+    width: 390px; 
     margin: 20px auto;
     background: #fff;
     border: 1px solid var(--border);
@@ -29,7 +27,6 @@
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
   }
   
-  /* App bar */
   .appbar{
     background: var(--penn-red);
     color: #fff;
@@ -43,7 +40,6 @@
   .appbar .title{font-weight:700}
   .appbar .right .icon{margin-left:10px;opacity:.9}
   
-  /* Split toggle row */
   .split-toggle{
     display:flex;
     align-items:center;
@@ -66,7 +62,6 @@
     color: var(--muted);
   }
   
-  /* Course list */
   .course-list{padding: 0 12px}
   .course-card{
     border-top:1px solid var(--border);
@@ -89,7 +84,6 @@
   .btn-add{background:var(--green-soft);color:#0a6a36;border:1px solid #b7e2c7}
   .btn-waitlist{background:var(--red-soft);color:#8a1e1a;border:1px solid #f3b7bb}
   
-  /* Cart select bar */
   .cart-select{
     margin-top: 8px;
     background: var(--penn-red);
@@ -101,18 +95,15 @@
     font-weight:600;
   }
   
-  /* Calendar */
   .calendar{
     position: relative;
     height: 520px;
-    /* Grid math helpers */
-    --rowH: 42px;              /* height per hour slot */
-    --colW: calc((100% - 60px)/5); /* 60px for time labels */
+    --rowH: 42px;            
+    --colW: calc((100% - 60px)/5);
     border-top:1px solid var(--border);
     background:#fff;
   }
   
-  /* Day headers */
   .day{
     position:absolute;
     top: 0;
@@ -129,7 +120,6 @@
   .day-4{left: calc(60px + var(--colW) * 3); width: var(--colW);}
   .day-5{left: calc(60px + var(--colW) * 4); width: var(--colW);}
   
-  /* Time labels */
   .time{
     position:absolute;
     left: 8px;
@@ -149,7 +139,6 @@
   .t-17{top: calc(36px + var(--rowH) * 9)}
   .t-18{top: calc(36px + var(--rowH) * 10)}
   
-  /* Grid overlay (vertical & horizontal lines) */
   .grid-overlay{
     position:absolute;
     left:60px;
@@ -162,7 +151,6 @@
     pointer-events:none;
   }
   
-  /* Calendar events */
   .event{
     position:absolute;
     left: calc(60px + var(--colW) * var(--day));
